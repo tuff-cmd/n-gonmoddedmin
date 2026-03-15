@@ -8814,7 +8814,7 @@ const tech = {
             requestAnimationFrame(() => {
                 let techGiven = 0
                 for (let j = 0; j < 3; j++) {
-                    const names = ["lens", "compound lens", "arc length", "infrared diode", "free-electron laser", "dye laser", "relativistic momentum", "specular reflection", "diffraction grating", "diffuse beam", "output coupler", "slow light", "laser-bot", "laser-bot upgrade", "collimator", "optical tweezers"]
+                    const names = ["lens", "compound lens", "arc length", "infrared diode", "free-electron laser", "dye laser", "relativistic momentum", "specular reflection", " grating", "diffuse beam", "output coupler", "slow light", "laser-bot", "laser-bot upgrade", "collimator", "optical tweezers"]
                     //convert names into indexes
                     const options = []
                     for (let i = 0; i < names.length; i++) {
@@ -8983,11 +8983,7 @@ const tech = {
             tech.beamSplitter++
             b.guns[11].chooseFireMethod()
         },
-        remove() {
-            if (tech.beamSplitter !== 0) {
-                tech.beamSplitter = 0
-                b.guns[11].chooseFireMethod()
-            }
+        
         }
     },
     {
@@ -9031,12 +9027,7 @@ const tech = {
             tech.isWideLaser = true;
             b.guns[11].chooseFireMethod()
         },
-        remove() {
-            if (tech.isWideLaser) {
-                // tech.wideLaser = 0
-                tech.isWideLaser = false;
-                b.guns[11].chooseFireMethod()
-            }
+        
         }
     },
     {
