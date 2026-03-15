@@ -4886,8 +4886,8 @@ const m = {
                 }
                 m.hold = function () {
                     const wave = Math.sin(m.cycle * 0.022);
-                    m.fieldRange = 180 + 12 * wave + 100 * tech.isBigField
-                    m.fieldArc = 0.35 + 0.045 * wave + 0.065 * tech.isBigField //run calculateFieldThreshold after setting fieldArc, used for powerUp grab and mobPush with lookingAt(mob)
+                    m.fieldRange = 378 + 24 * wave + 200 * tech.isBigField
+                    m.fieldArc = 0.7 + 0.09 * wave + 0.13 * tech.isBigField //run calculateFieldThreshold after setting fieldArc, used for powerUp grab and mobPush with lookingAt(mob)
                     m.calculateFieldThreshold();
                     if (m.isHolding) {
                         m.drawHold(m.holdingTarget);
