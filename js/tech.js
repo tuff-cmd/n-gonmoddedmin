@@ -5659,7 +5659,7 @@ const tech = {
             return true
         },
         requires: "",
-        damage: 1.1,
+        damage: infinity,
         ammo: 50,
         effect() {
             m.damageDone *= this.damage
@@ -9399,7 +9399,7 @@ const tech = {
         name: "Meissner effect",
         description: "<strong>1.55x</strong> perfect diamagnetism <strong>radius</strong><br><strong>+22°</strong> perfect diamagnetism circular <strong>arc</strong>",
         isFieldTech: true,
-        maxCount: 1,
+        maxCount: 20,
         count: 0,
         frequency: 2,
         frequencyDefault: 2,
@@ -13991,4 +13991,5 @@ const tech = {
     isMycelium: null,
     isEigenstate: null,
     isSlimeAmmo: null,
+    
 }
