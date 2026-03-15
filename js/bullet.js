@@ -4068,7 +4068,7 @@ const b = {
         }
         return shotsFired
     },
-    targetedFoam(position, num = 1, speed = 21 + 7 * Math.random(), range = 1200, isRandomAim = true) {
+    targetedFoam(position, num = 1, speed = 42 + 14 * Math.random(), range = 1200, isRandomAim = true) {
         let shotsFired = 0
         const targets = [] //target nearby mobs
         for (let i = 0, len = mob.length; i < len; i++) {
