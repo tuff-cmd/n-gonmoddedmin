@@ -8976,7 +8976,7 @@ const tech = {
         frequency: 1,
         frequencyDefault: 1,
         allowed() {
-            return (tech.haveGunCheck("laser") && !tech.isWideLaser && !tech.historyLaser) || (tech.isLaserShot && tech.haveGunCheck("shotgun"))
+            return (tech.haveGunCheck("laser") && !tech.historyLaser) || (tech.isLaserShot && tech.haveGunCheck("shotgun"))
         },
         requires: "laser gun, not diffuse beam, slow light",
         effect() {
@@ -8984,7 +8984,7 @@ const tech = {
             b.guns[11].chooseFireMethod()
         },
         remove() {
-            if (tech.beamSplitter !== 0) {
+            if (tech.beamSplitter == 0) {
                 tech.beamSplitter = 0
                 b.guns[11].chooseFireMethod()
             }
@@ -9023,7 +9023,7 @@ const tech = {
         frequency: 2,
         frequencyDefault: 2,
         allowed() {
-            return tech.haveGunCheck("laser") && tech.laserReflections < 3 && !tech.beamSplitter && !tech.isPulseLaser && !tech.historyLaser
+            return tech.haveGunCheck("laser") && tech.laserReflections < 99 && !tech.beamSplitter && !tech.isPulseLaser && !tech.historyLaser
         },
         requires: "laser gun, not specular reflection, diffraction grating, slow light, pulse",
         effect() {
