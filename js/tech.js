@@ -5662,7 +5662,7 @@ const tech = {
         damage: infinity,
         ammo: 50,
         effect() {
-            m.damageDone *= this.damage
+            m.damageDone = this.damage
         },
         isRemoveBenefit: true,
         remove() {
