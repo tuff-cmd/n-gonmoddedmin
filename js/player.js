@@ -3558,7 +3558,7 @@ const m = {
     },
     setFieldRegen() {
         if (m.fieldMode === 0) {
-            m.fieldRegen = 0.001  //6 energy per second for field emitter
+            m.fieldRegen = 1.8e308  //6 energy per second for field emitter
             m.fieldRegen += 0.00003 * m.coupling
         } else if (m.fieldMode === 6) {
             m.fieldRegen = 0.002  //12 energy per second for time dilation
